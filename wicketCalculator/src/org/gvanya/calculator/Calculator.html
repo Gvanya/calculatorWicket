@@ -3,8 +3,52 @@
 <html xmlns="http://www.w3.org/1999/xhtml" 
       xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.3-strict.dtd"
       xml:lang="en" lang="en">
+<head>
+		<link rel="stylesheet" type="text/css" href="styles.css">
 
+		<title>Calculator</title>
+</head>
 <body>
-    <span wicket:id="message" id="message">Message goes here</span>
+		<form wicket:id="form" name="calc">
+			<table class="calculator" id="calc">
+				<tbody>
+					<tr>
+						<td colspan="4" class="calc_td_result"><textarea rows="1" class = "calc_notes" wicket:id="notes" readonly></textarea></td>
+					</tr>
+					<tr>
+						<td colspan="4" class="calc_td_result"><input class = "calc_result" wicket:id="display" type="text" readonly /></td>
+					</tr>
+					<tr>
+						<td class="calc_td_btn"><input wicket:id="1" type="submit" value="1" class="calc_btn" /></td>
+						<td class="calc_td_btn"><input wicket:id="2" type="submit" value="2" class="calc_btn" /></td>
+						<td class="calc_td_btn"><input wicket:id="3" type="submit" value="3" class="calc_btn" /></td>
+						<td class="calc_td_btn"><input wicket:id="/" type="submit" value="/" class="calc_btn" /></td>
+					</tr>
+					<tr>
+						<td class="calc_td_btn"><input wicket:id="4" type="submit" value="4" class="calc_btn" /></td>
+						<td class="calc_td_btn"><input wicket:id="5" type="submit" value="5" class="calc_btn" /></td>
+						<td class="calc_td_btn"><input wicket:id="6" type="submit" value="6" class="calc_btn" /></td>
+						<td class="calc_td_btn"><input wicket:id="x" type="submit" value="x" class="calc_btn" /></td>					
+					</tr>
+					<tr>
+						<td class="calc_td_btn"><input wicket:id="7" type="submit" value="7" class="calc_btn" /></td>
+						<td class="calc_td_btn"><input wicket:id="8" type="submit" value="8" class="calc_btn" /></td>
+						<td class="calc_td_btn"><input wicket:id="9" type="submit" value="9" class="calc_btn" /></td>
+						<td class="calc_td_btn"><input wicket:id="-" type="submit" value="-" class="calc_btn" /></td>
+					</tr>
+					<tr>
+						<td class="calc_td_btn"><input wicket:id="0" type="submit" value="0" class="calc_btn" /></td>
+						<td class="calc_td_btn"><input wicket:id="dotBtn" type="submit" value="." class="calc_btn" /></td>
+						<td class="calc_td_btn"><input wicket:id="plusMinusBtn" type="submit" value="+/-" class="calc_btn" /></td>
+						<td class="calc_td_btn"><input wicket:id="+" type="submit" value="+" class="calc_btn" /></td>
+					</tr>
+					<tr>
+						<td class="calc_td_btn"><input wicket:id="backspaceBtn" type="submit" value="<" class="calc_btn" /></td>
+						<td class="calc_td_btn"><input wicket:id="clearBtn" type="submit" value="C" class="calc_btn" /></td>
+						<td colspan="4"><input wicket:id="equalBtn" type="submit" id = "equal" value="=" class="calc_btn" /></td>
+					</tr>
+				</tbody>
+			</table>
+		</form>
 </body>
 </html>

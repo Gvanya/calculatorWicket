@@ -24,6 +24,18 @@
 				</configuration>
 			</plugin>
 		</plugins>
+		<resources>
+		   <resource>
+			    <filtering>false</filtering>
+			    <directory>src</directory>
+			    <includes>
+			     <include>**</include>
+			    </includes>
+			    <excludes>
+			     <exclude>**/*.java</exclude>
+			    </excludes>
+		   </resource>
+  		</resources>
 	</build>
 	
 	<dependencies>

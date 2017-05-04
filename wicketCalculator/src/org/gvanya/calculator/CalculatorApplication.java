@@ -1,7 +1,14 @@
 package org.gvanya.calculator;
 
+import org.apache.wicket.Page;
 import org.apache.wicket.protocol.http.WebApplication;
 
+/**
+ * Common Apache Wicket loader class.
+ * 
+ * @author Gerasymchuk Ivan
+ *
+ */
 public class CalculatorApplication extends WebApplication {
     /**
      * Constructor.
@@ -10,9 +17,10 @@ public class CalculatorApplication extends WebApplication {
     }
 
     /**
-     * @see org.apache.wicket.Application#getHomePage()
+     * @return {@code Calculator.class} as homepage processor. 
      */
-    public Class getHomePage() {
+    @Override
+    public Class<? extends Page> getHomePage() {
         return Calculator.class;
     }
 }
